@@ -10,6 +10,7 @@ public class PlayersController : MonoBehaviour
     private int sumOfDicesPips;
     private BoardGameController boardGameController;
     private int movePlayerNumber;
+    private bool isPlayerMoving;
 
     private void Start()
     {
@@ -21,14 +22,19 @@ public class PlayersController : MonoBehaviour
         sumOfDicesPips = 0;
         boardGameController = FindObjectOfType<BoardGameController>();
         movePlayerNumber = 0;
+        isPlayerMoving = false;
     }
 
     private void Update()
     {
         sumOfDicesPips = boardGameController.GetDicesPips();
         movePlayerNumber = boardGameController.GetPlayerNumber();
-
-        playersList[movePlayerNumber].GetComponent<NavMeshAgent>().SetDestination(new Vector3(playersList[movePlayerNumber].position.x, playersList[movePlayerNumber].position.y, playersList[movePlayerNumber].position.z + sumOfDicesPips));
+        isPlayerMoving = boardGameController.GetPlayerCanMove();
+        if (isPlayerMoving)
+        {
+            playersList[movePlayerNumber].GetComponent<NavMeshAgent>().SetDestination(new Vector3(playersList[movePlayerNumber].position.x, playersList[movePlayerNumber].position.y, sumOfDicesPips));
+        }
+        
         /*
         foreach (Transform player in playersList)
         {
