@@ -19,8 +19,9 @@ public class BoardGameController : MonoBehaviour
 
     public Text diceOneText;
     public Text diceTwoText;
-    public Button rollDicesButton;
     public Button startButton;
+    public Button rollDicesButton;
+    public Button buyFieldButton;
     public Button endOfTurnButton;
 
     private void Start()
@@ -36,11 +37,13 @@ public class BoardGameController : MonoBehaviour
 
         diceOneText.transform.position = new Vector3(0.1f * Screen.width, 0.9f * Screen.height, 0);
         diceTwoText.transform.position = new Vector3(0.1f * Screen.width, 0.85f * Screen.height, 0);
-        rollDicesButton.transform.position = new Vector3(0.1f * Screen.width, 0.75f * Screen.height, 0);
         startButton.transform.position = new Vector3(0.5f * Screen.width, 0.5f * Screen.height, 0);
+        rollDicesButton.transform.position = new Vector3(0.1f * Screen.width, 0.75f * Screen.height, 0);
+        buyFieldButton.transform.position = new Vector3(0.1f * Screen.width, 0.5f * Screen.height, 0);
         endOfTurnButton.transform.position = new Vector3(0.1f * Screen.width, 0.1f * Screen.height, 0);
 
         DeactivateRollDicesButton();
+        DeactivateBuyFieldButton();
         DeactivateEndOfTurnButton();
     }
 
@@ -63,6 +66,16 @@ public class BoardGameController : MonoBehaviour
     private void ActivateRollDicesButton()
     {
         rollDicesButton.interactable = true;
+    }
+
+    private void DeactivateBuyFieldButton()
+    {
+        buyFieldButton.interactable = false;
+    }
+
+    private void ActivateBuyFieldButton()
+    {
+        buyFieldButton.interactable = true;
     }
 
     private void DeactivateEndOfTurnButton()
@@ -132,14 +145,21 @@ public class BoardGameController : MonoBehaviour
             if (pipsFromDiceOne == pipsFromDiceTwo)
             {
                 ActivateRollDicesButton();
+                ActivateBuyFieldButton();
                 DeactivateEndOfTurnButton();
             }
             else
             {
                 DeactivateRollDicesButton();
+                ActivateBuyFieldButton();
                 ActivateEndOfTurnButton();
             }
         }
+    }
+
+    public void BuyField()
+    { 
+        
     }
 
     public void EndOfTurn()
@@ -153,6 +173,7 @@ public class BoardGameController : MonoBehaviour
             }
             playerCanMove = false;
             DeactivateEndOfTurnButton();
+            DeactivateBuyFieldButton();
             ActivateRollDicesButton();
         }
     }
