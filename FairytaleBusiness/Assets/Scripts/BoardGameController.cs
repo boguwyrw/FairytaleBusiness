@@ -13,6 +13,8 @@ public class BoardGameController : MonoBehaviour
     private bool startGame;
     private bool playerCanMove;
 
+    public Text diceOneText;
+    public Text diceTwoText;
     public Button rollDicesButton;
     public Button startButton;
     public Button endOfTurnButton;
@@ -24,9 +26,14 @@ public class BoardGameController : MonoBehaviour
         startGame = false;
         playerCanMove = false;
 
-        rollDicesButton.transform.position = new Vector3(0.1f * Screen.width, 0.9f * Screen.height, 0);
+        diceOneText.transform.position = new Vector3(0.1f * Screen.width, 0.9f * Screen.height, 0);
+        diceTwoText.transform.position = new Vector3(0.1f * Screen.width, 0.85f * Screen.height, 0);
+        rollDicesButton.transform.position = new Vector3(0.1f * Screen.width, 0.75f * Screen.height, 0);
         startButton.transform.position = new Vector3(0.5f * Screen.width, 0.5f * Screen.height, 0);
         endOfTurnButton.transform.position = new Vector3(0.1f * Screen.width, 0.1f * Screen.height, 0);
+
+        DeactivateRollDicesButton();
+        DeactivateEndOfTurnButton();
     }
 
     private void Update()
@@ -35,29 +42,63 @@ public class BoardGameController : MonoBehaviour
         {
             startButton.gameObject.SetActive(false);
         }
+
+        diceOneText.text = "Dice 1: " + pipsFromDiceOne.ToString();
+        diceTwoText.text = "Dice 2: " + pipsFromDiceTwo.ToString();
+    }
+
+    private void DeactivateRollDicesButton()
+    {
+        rollDicesButton.interactable = false;
+    }
+
+    private void ActivateRollDicesButton()
+    {
+        rollDicesButton.interactable = true;
+    }
+
+    private void DeactivateEndOfTurnButton()
+    {
+        endOfTurnButton.interactable = false;
+    }
+
+    private void ActivateEndOfTurnButton()
+    {
+        endOfTurnButton.interactable = true;
     }
 
     public void StartGame()
     {
         startGame = true;
+        ActivateRollDicesButton();
     }
 
     public void RollDices()
     {
-        pipsFromDiceOne = Random.Range(1, 7);
-        pipsFromDiceTwo = Random.Range(1, 7);
-        dicesPips = pipsFromDiceOne + pipsFromDiceTwo;
-        playerCanMove = true;
+        if (startGame)
+        {
+            pipsFromDiceOne = Random.Range(1, 7);
+            pipsFromDiceTwo = Random.Range(1, 7);
+            dicesPips = pipsFromDiceOne + pipsFromDiceTwo;
+            playerCanMove = true;
+            DeactivateRollDicesButton();
+            ActivateEndOfTurnButton();
+        }
     }
 
     public void EndOfTurn()
     {
-        playerNumber += 1;
-        if (playerNumber > 3)
+        if (startGame)
         {
-            playerNumber = 0;
+            playerNumber += 1;
+            if (playerNumber > 3)
+            {
+                playerNumber = 0;
+            }
+            playerCanMove = false;
+            DeactivateEndOfTurnButton();
+            ActivateRollDicesButton();
         }
-        playerCanMove = false;
     }
 
     public int GetPlayerNumber()
