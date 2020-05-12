@@ -44,7 +44,11 @@ public class PlayersController : MonoBehaviour
         sumOfDicesPips = boardGameController.GetDicesPips();
         movePlayerNumber = boardGameController.GetPlayerNumber();
         isPlayerMoving = boardGameController.GetPlayerCanMove();
-        
+        player_1_Location = boardGameController.GetPlayerOneLocation();
+        player_2_Location = boardGameController.GetPlayerTwoLocation();
+        player_3_Location = boardGameController.GetPlayerThreeLocation();
+        player_4_Location = boardGameController.GetPlayerFourLocation();
+
         CurrentPlayersLocation();
 
         /*
@@ -54,45 +58,38 @@ public class PlayersController : MonoBehaviour
         }
         */
     }
-
-    private void PlayerIsMoving()
-    {
-        if (isPlayerMoving)
-        {
-            playersList[movePlayerNumber].GetComponent<NavMeshAgent>().SetDestination(boardGameWaypointsPath[sumOfDicesPips].transform.position);
-        }
-    }
-
+    
     private void CurrentPlayersLocation()
     {
         switch (movePlayerNumber)
         {
             case 0:
                 Debug.Log("Player_1");
-                Debug.Log(player_1_Location.ToString());
                 if (isPlayerMoving)
                 {
-                    player_1_Location = player_1_Location + sumOfDicesPips;
-                    if (player_1_Location > 39)
-                    {
-                        player_1_Location = player_1_Location - boardGameWaypointsPath.Count;
-                    }
                     playersList[0].GetComponent<NavMeshAgent>().SetDestination(boardGameWaypointsPath[player_1_Location].transform.position);
                 }
-                
-                //PlayerIsMoving();
                 break;
             case 1:
                 Debug.Log("Player_2");
-                PlayerIsMoving();
+                if (isPlayerMoving)
+                {
+                    playersList[1].GetComponent<NavMeshAgent>().SetDestination(boardGameWaypointsPath[player_2_Location].transform.position);
+                }
                 break;
             case 2:
                 Debug.Log("Player_3");
-                PlayerIsMoving();
+                if (isPlayerMoving)
+                {
+                    playersList[2].GetComponent<NavMeshAgent>().SetDestination(boardGameWaypointsPath[player_3_Location].transform.position);
+                }
                 break;
             case 3:
                 Debug.Log("Player_4");
-                PlayerIsMoving();
+                if (isPlayerMoving)
+                {
+                    playersList[3].GetComponent<NavMeshAgent>().SetDestination(boardGameWaypointsPath[player_4_Location].transform.position);
+                }
                 break;
         }
     }
