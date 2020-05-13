@@ -112,6 +112,24 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 8d09b9fcebff128429ee8fff4ebf44f0, type: 2}
+--- !u!23 &6044988 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1349829077}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &8932924 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 350027370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &30055732 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1099845531}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &32373425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -131,9 +149,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: StepmothersMansionInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: StepmothersMansionOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -580,6 +606,12 @@ Transform:
   m_Father: {fileID: 1755635008}
   m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &122217495 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 204520089}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &151931495
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,7 +645,7 @@ Transform:
   - {fileID: 76632567}
   - {fileID: 1214915762682053591}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &151931497
 MonoBehaviour:
@@ -668,6 +700,12 @@ MonoBehaviour:
   - {fileID: 2113243641}
   - {fileID: 2080742724}
   - {fileID: 1306050835}
+--- !u!23 &170548690 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 728358403}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &194182189
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -687,9 +725,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: EricsShipInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: EricsShipOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -770,9 +816,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: JafarsMansionInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: JafarsMansionOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -894,6 +948,12 @@ Transform:
   m_Father: {fileID: 1755635008}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &234090723 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 542181962}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &246430265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -913,9 +973,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: Four-LeafClover_03_InnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: Four-LeafClover_03_OuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -992,9 +1060,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: AladdinsMansionInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: AladdinsMansionOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1056,6 +1132,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 304789359}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &327648190 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1352739045}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &350027370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1075,9 +1157,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: TridentInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: TridentOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1109,7 +1199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1148,9 +1238,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: DungeonsOfTheEvilQueenInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: DungeonsOfTheEvilQueenOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1182,7 +1280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1237,8 +1335,26 @@ Transform:
   - {fileID: 1015539269}
   - {fileID: 1236563115}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &365492581 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1097172948}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &370485491 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1601911263}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &374105545 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1836905447}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &378543440
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,7 +1540,7 @@ Transform:
   - {fileID: 1099845532}
   - {fileID: 1461613092}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &424898940
 GameObject:
@@ -1503,6 +1619,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 424898940}
   m_CullTransparentMesh: 0
+--- !u!23 &426622248 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1150401660}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &428766445
 GameObject:
   m_ObjectHideFlags: 0
@@ -1552,9 +1674,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: JasmineCastleInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: JasmineCastleOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1613,6 +1743,24 @@ PrefabInstance:
 --- !u!4 &471627192 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 471627191}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &479255435 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1461613091}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &481753204 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1950963622}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &487302931 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
     type: 3}
   m_PrefabInstance: {fileID: 471627191}
   m_PrefabAsset: {fileID: 0}
@@ -1712,9 +1860,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: SnowWhiteCastleInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: SnowWhiteCastleOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1776,6 +1932,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 493429826}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &500588568 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 304789359}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &511170163 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 644015579}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &514840059
 GameObject:
   m_ObjectHideFlags: 0
@@ -1806,6 +1974,12 @@ Transform:
   m_Father: {fileID: 1755635008}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &518112798 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 845417667}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519490648
 GameObject:
   m_ObjectHideFlags: 0
@@ -1931,6 +2105,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519490648}
   m_CullTransparentMesh: 0
+--- !u!23 &533709010 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1836230263}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &535109149
 GameObject:
   m_ObjectHideFlags: 0
@@ -1980,9 +2160,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: UnderwaterCastleInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: UnderwaterCastleOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2105,8 +2293,14 @@ Transform:
   - {fileID: 1950963623}
   - {fileID: 493429827}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &565928324 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1677264603}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &580797712
 GameObject:
   m_ObjectHideFlags: 0
@@ -2167,7 +2361,7 @@ Transform:
   - {fileID: 973929297}
   - {fileID: 1090393269}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &644015579
 PrefabInstance:
@@ -2188,9 +2382,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: FairyLodgeInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: FairyLodgeOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2271,9 +2473,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: RoyalGuardInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: RoyalGuardOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2305,7 +2515,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2325,6 +2535,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: b27eee7aa187af74c9d489ffac1ed877, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+--- !u!23 &660112057 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1491063198}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &694325712
 GameObject:
   m_ObjectHideFlags: 0
@@ -2374,9 +2590,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: WellOfMiracles_01_InnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: WellOfMiracles_01_OuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2438,6 +2662,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 728358403}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &763614111 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1098765626}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &788924903
 GameObject:
   m_ObjectHideFlags: 0
@@ -2469,8 +2699,14 @@ Transform:
   - {fileID: 1836905448}
   - {fileID: 1836230264}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &824395559 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1032184858}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &826126045
 GameObject:
   m_ObjectHideFlags: 0
@@ -2502,7 +2738,7 @@ Transform:
   - {fileID: 304789360}
   - {fileID: 471627192}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &845417667
 PrefabInstance:
@@ -2523,9 +2759,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: CastleOfTheBeastInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: CastleOfTheBeastOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2678,7 +2922,7 @@ Transform:
   - {fileID: 1150401661}
   - {fileID: 1431168791}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &912076013
 GameObject:
@@ -2760,6 +3004,18 @@ MonoBehaviour:
   rollDicesButton: {fileID: 519490650}
   buyFieldButton: {fileID: 1236360906}
   endOfTurnButton: {fileID: 32658031}
+--- !u!23 &944394528 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1184260114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &954930798 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 654774475}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &956021480
 GameObject:
   m_ObjectHideFlags: 0
@@ -2940,9 +3196,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: WinnieThePoohsHouseInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: WinnieThePoohsHouseOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3053,9 +3317,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: PrinceFilipsCastleInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: PrinceFilipsCastleOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3136,9 +3408,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: CinderellasCarriageInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: CinderellasCarriageOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3219,9 +3499,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: CastleOfPrincessAuroraInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: CastleOfPrincessAuroraOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3360,6 +3648,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061051407}
   m_CullTransparentMesh: 0
+--- !u!23 &1062873136 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1015539268}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1071034029
 GameObject:
   m_ObjectHideFlags: 0
@@ -3409,9 +3703,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: PigletsHouseInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: PigletsHouseOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3492,9 +3794,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: DonationToPeopleInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: DonationToPeopleOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3526,7 +3836,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3565,9 +3875,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: KingsCastleInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: KingsCastleOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3648,9 +3966,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: ElsaIceCastleInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: ElsaIceCastleOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3743,7 +4069,7 @@ Transform:
   - {fileID: 1601911264}
   - {fileID: 845417668}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1143274128
 GameObject:
@@ -3794,9 +4120,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: LodgeOfTheSevenDwarfsInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: LodgeOfTheSevenDwarfsOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3877,9 +4211,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: WellOfMiracles_02_InnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: WellOfMiracles_02_OuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3960,9 +4302,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: BellesHouseInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: BellesHouseOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4043,9 +4393,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: Four-LeafClover_01_InnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: Four-LeafClover_01_OuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4133,6 +4491,12 @@ Transform:
   m_Father: {fileID: 1755635008}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1206643352 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1987113203}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1233964010
 GameObject:
   m_ObjectHideFlags: 0
@@ -4307,9 +4671,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: MansionOfTheSorceressInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: MansionOfTheSorceressOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4370,6 +4742,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
     type: 3}
   m_PrefabInstance: {fileID: 1236563114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1275437729 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1090393268}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1284515642
 GameObject:
@@ -4540,7 +4918,7 @@ Transform:
   - {fileID: 1491063199}
   - {fileID: 194182190}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1306050834
 GameObject:
@@ -4572,6 +4950,12 @@ Transform:
   m_Father: {fileID: 1755635008}
   m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1326796501 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1177833246}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1330581604
 GameObject:
   m_ObjectHideFlags: 0
@@ -4723,9 +5107,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: Four-LeafClover_02_InnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: Four-LeafClover_02_OuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4802,9 +5194,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: GiftsForTheKingInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: GiftsForTheKingOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4836,7 +5236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4905,9 +5305,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: WellOfMiracles_03_InnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: WellOfMiracles_03_OuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5018,9 +5426,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: AnnaAndElsaCastleInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: AnnaAndElsaCastleOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5178,9 +5594,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: AladdinsFlyingCarpetInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: AladdinsFlyingCarpetOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5356,9 +5780,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: GladeInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: GladeOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5390,7 +5822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5414,6 +5846,18 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: b27eee7aa187af74c9d489ffac1ed877, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+--- !u!23 &1559915972 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 973929296}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1564194617 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1236563114}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1589276193
 GameObject:
   m_ObjectHideFlags: 0
@@ -5463,9 +5907,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: PropertyOfTheInventorsInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: PropertyOfTheInventorsOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5526,6 +5978,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
     type: 3}
   m_PrefabInstance: {fileID: 1601911263}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1602878157 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 194182189}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1627771314
 GameObject:
@@ -5606,9 +6064,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: WitchsBroomInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: WitchsBroomOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5669,6 +6135,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
     type: 3}
   m_PrefabInstance: {fileID: 1677264603}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1690722292 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 493429826}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1739728329
 GameObject:
@@ -5774,6 +6246,12 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!23 &1744064422 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 351772357}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1751080563
 GameObject:
   m_ObjectHideFlags: 0
@@ -5872,7 +6350,7 @@ Transform:
   - {fileID: 2080742724}
   - {fileID: 1306050835}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1761004308
 GameObject:
@@ -6012,7 +6490,7 @@ Transform:
   - {fileID: 644015580}
   - {fileID: 1098765627}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1836230263
 PrefabInstance:
@@ -6033,9 +6511,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: UrsulasMansionInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: UrsulasMansionOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6116,9 +6602,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: PrinceEricsCastleInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: PrinceEricsCastleOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6179,6 +6673,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
     type: 3}
   m_PrefabInstance: {fileID: 1836905447}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1871187016 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1024135454}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1874353297 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1144746395}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1885011506
 GameObject:
@@ -6289,9 +6795,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: PrincesCastleInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: PrincesCastleOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6353,6 +6867,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1950963622}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &1961038459 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1431168790}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1975613955
 GameObject:
   m_ObjectHideFlags: 0
@@ -6402,9 +6922,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: MagicWandInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: MagicWandOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6436,7 +6964,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6456,6 +6984,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: bacde3cf3b855094d90cf8fa52611cb4, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+--- !u!23 &2020422611 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 2102593760}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2030578068
 GameObject:
   m_ObjectHideFlags: 0
@@ -6486,6 +7020,91 @@ Transform:
   m_Father: {fileID: 1755635008}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2067855875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2067855876}
+  - component: {fileID: 2067855877}
+  m_Layer: 0
+  m_Name: BuyFieldController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2067855876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067855875}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2067855877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067855875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a1067ece752cad4bbd63c8474faa81c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  field_5_Color: {fileID: 1871187016}
+  listOfFieldsColors:
+  - {fileID: 2020422611}
+  - {fileID: 1559915972}
+  - {fileID: 170548690}
+  - {fileID: 1275437729}
+  - {fileID: 327648190}
+  - {fileID: 1871187016}
+  - {fileID: 1326796501}
+  - {fileID: 944394528}
+  - {fileID: 370485491}
+  - {fileID: 518112798}
+  - {fileID: 1744064422}
+  - {fileID: 2115736630}
+  - {fileID: 8932924}
+  - {fileID: 511170163}
+  - {fileID: 763614111}
+  - {fileID: 565928324}
+  - {fileID: 824395559}
+  - {fileID: 426622248}
+  - {fileID: 1062873136}
+  - {fileID: 1564194617}
+  - {fileID: 2122025391}
+  - {fileID: 1874353297}
+  - {fileID: 6044988}
+  - {fileID: 481753204}
+  - {fileID: 1690722292}
+  - {fileID: 660112057}
+  - {fileID: 234090723}
+  - {fileID: 374105545}
+  - {fileID: 1206643352}
+  - {fileID: 533709010}
+  - {fileID: 954930798}
+  - {fileID: 122217495}
+  - {fileID: 500588568}
+  - {fileID: 1961038459}
+  - {fileID: 487302931}
+  - {fileID: 1602878157}
+  - {fileID: 2146088618}
+  - {fileID: 30055732}
+  - {fileID: 365492581}
+  - {fileID: 479255435}
 --- !u!1 &2080742723
 GameObject:
   m_ObjectHideFlags: 0
@@ -6565,9 +7184,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: StartInnerCube
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
+      propertyPath: m_Name
+      value: StartOuterFrame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6599,7 +7226,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b8c323a98213c646bd2ae3a0f8166cd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6683,7 +7310,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2113243640
 GameObject:
@@ -6715,6 +7342,18 @@ Transform:
   m_Father: {fileID: 1755635008}
   m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &2115736630 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 32373425}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &2122025391 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1527546741}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2124851994
 GameObject:
   m_ObjectHideFlags: 0
@@ -6806,8 +7445,14 @@ Transform:
   - {fileID: 1349829078}
   - {fileID: 246430266}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &2146088618 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 9b8c323a98213c646bd2ae3a0f8166cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 246430265}
+  m_PrefabAsset: {fileID: 0}
 --- !u!23 &1214915762679628087
 MeshRenderer:
   m_ObjectHideFlags: 0

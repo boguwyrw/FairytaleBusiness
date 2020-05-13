@@ -16,6 +16,8 @@ public class BoardGameController : MonoBehaviour
     private int playerTwoLocation;
     private int playerThreeLocation;
     private int playerFourLocation;
+    private bool canBuyField;
+    private BuyFieldController buyFieldController;
 
     public Text diceOneText;
     public Text diceTwoText;
@@ -34,6 +36,8 @@ public class BoardGameController : MonoBehaviour
         playerTwoLocation = 0;
         playerThreeLocation = 0;
         playerFourLocation = 0;
+        canBuyField = false;
+        buyFieldController = FindObjectOfType<BuyFieldController>();
 
         diceOneText.transform.position = new Vector3(0.1f * Screen.width, 0.9f * Screen.height, 0);
         diceTwoText.transform.position = new Vector3(0.1f * Screen.width, 0.85f * Screen.height, 0);
@@ -56,6 +60,9 @@ public class BoardGameController : MonoBehaviour
 
         diceOneText.text = "Dice 1: " + pipsFromDiceOne.ToString();
         diceTwoText.text = "Dice 2: " + pipsFromDiceTwo.ToString();
+
+        canBuyField = buyFieldController.GetCanBuyOrCanNotBuy();
+        Debug.Log("canBuyField: " + canBuyField.ToString());
     }
 
     private void DeactivateRollDicesButton()
@@ -152,14 +159,28 @@ public class BoardGameController : MonoBehaviour
             {
                 DeactivateRollDicesButton();
                 ActivateBuyFieldButton();
-                ActivateEndOfTurnButton();
+                DeactivateEndOfTurnButton();
             }
+
+            if (canBuyField == true)
+            {
+                ActivateBuyFieldButton();
+            }
+            
         }
     }
 
     public void BuyField()
-    { 
-        
+    {
+        DeactivateBuyFieldButton();
+        if (pipsFromDiceOne == pipsFromDiceTwo)
+        {
+            DeactivateEndOfTurnButton();
+        }
+        else
+        {
+            ActivateEndOfTurnButton();
+        }
     }
 
     public void EndOfTurn()
