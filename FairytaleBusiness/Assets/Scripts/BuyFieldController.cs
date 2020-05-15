@@ -36,26 +36,10 @@ public class BuyFieldController : MonoBehaviour
         currentPlayerLocation = playersController.GetPlayerLocation();
     }
 
-    private void MarkingFieldsSystem()
-    {
-        for (int i = 0; i < listOfFieldsColors.Count; i++)
-        {
-            if (listOfFieldsColors[i].material.color == new Color32(220, 220, 220, 255))
-            {
-                canBuyOrCanNotBuyList.Add(true);
-            }
-            else
-            {
-                canBuyOrCanNotBuyList.Add(false);
-            }
-        }
-    }
-
     public void MarkField()
     {
         listOfFieldsColors[currentPlayerLocation].material.color = playersController.GetPlayersColors();
-        canBuyOrCanNotBuyList.Clear();
-        MarkingFieldsSystem();
+        canBuyOrCanNotBuyList[currentPlayerLocation] = false;
     }
 
     public bool GetCanBuyOrCanNotBuy()
