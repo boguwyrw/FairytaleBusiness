@@ -10,6 +10,8 @@ public class PlayersController : MonoBehaviour
     private BoardGameController boardGameController;
     private int movePlayerNumber;
     private bool isPlayerMoving;
+    private List<Color32> playersColorsList = new List<Color32>();
+    private Color32 playerColor;
     // Players location
     private int player_1_Location;
     private int player_2_Location;
@@ -24,6 +26,7 @@ public class PlayersController : MonoBehaviour
         for (int i = 0; i < gameObject.transform.childCount; i++)
         {
             playersList.Add(gameObject.transform.GetChild(i));
+            playersColorsList.Add(gameObject.transform.GetChild(i).GetComponent<Renderer>().material.color);
         }
 
         boardGameController = FindObjectOfType<BoardGameController>();
@@ -35,6 +38,7 @@ public class PlayersController : MonoBehaviour
         player_3_Location = 0;
         player_4_Location = 0;
         playerLocation = 0;
+        playerColor = new Color32(0, 0, 0, 255);
     }
 
     private void Update()
@@ -110,6 +114,12 @@ public class PlayersController : MonoBehaviour
             playerLocation = player_4_Location;
         }
         return playerLocation;
+    }
+
+    public Color32 GetPlayersColors()
+    {
+        playerColor = playersColorsList[movePlayerNumber];
+        return playerColor;
     }
 
 }
