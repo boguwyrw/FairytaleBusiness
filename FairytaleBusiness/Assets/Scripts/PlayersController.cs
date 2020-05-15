@@ -61,42 +61,54 @@ public class PlayersController : MonoBehaviour
         switch (movePlayerNumber)
         {
             case 0:
-                //Debug.Log("Player_1");
                 if (isPlayerMoving)
                 {
                     playersList[0].GetComponent<NavMeshAgent>().SetDestination(boardGameWaypointsPath[player_1_Location].transform.position);
                 }
-                playerLocation = player_1_Location;
+                //playerLocation = player_1_Location;
                 break;
             case 1:
-                //Debug.Log("Player_2");
                 if (isPlayerMoving)
                 {
                     playersList[1].GetComponent<NavMeshAgent>().SetDestination(boardGameWaypointsPath[player_2_Location].transform.position);
                 }
-                playerLocation = player_2_Location;
+                //playerLocation = player_2_Location;
                 break;
             case 2:
-                //Debug.Log("Player_3");
                 if (isPlayerMoving)
                 {
                     playersList[2].GetComponent<NavMeshAgent>().SetDestination(boardGameWaypointsPath[player_3_Location].transform.position);
                 }
-                playerLocation = player_3_Location;
+                //playerLocation = player_3_Location;
                 break;
             case 3:
-                //Debug.Log("Player_4");
                 if (isPlayerMoving)
                 {
                     playersList[3].GetComponent<NavMeshAgent>().SetDestination(boardGameWaypointsPath[player_4_Location].transform.position);
                 }
-                playerLocation = player_4_Location;
+                //playerLocation = player_4_Location;
                 break;
         }
     }
 
     public int GetPlayerLocation()
     {
+        if (movePlayerNumber == 0)
+        {
+            playerLocation = player_1_Location;
+        }
+        if (movePlayerNumber == 1)
+        {
+            playerLocation = player_2_Location;
+        }
+        if (movePlayerNumber == 2)
+        {
+            playerLocation = player_3_Location;
+        }
+        if (movePlayerNumber == 3)
+        {
+            playerLocation = player_4_Location;
+        }
         return playerLocation;
     }
 

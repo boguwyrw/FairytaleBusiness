@@ -18,6 +18,7 @@ public class BoardGameController : MonoBehaviour
     private int playerFourLocation;
     private bool canBuyField;
     private BuyFieldController buyFieldController;
+    private string playerAction;
 
     public Text diceOneText;
     public Text diceTwoText;
@@ -38,6 +39,7 @@ public class BoardGameController : MonoBehaviour
         playerFourLocation = 0;
         canBuyField = false;
         buyFieldController = FindObjectOfType<BuyFieldController>();
+        playerAction = "";
 
         diceOneText.transform.position = new Vector3(0.1f * Screen.width, 0.9f * Screen.height, 0);
         diceTwoText.transform.position = new Vector3(0.1f * Screen.width, 0.85f * Screen.height, 0);
@@ -62,7 +64,9 @@ public class BoardGameController : MonoBehaviour
         diceTwoText.text = "Dice 2: " + pipsFromDiceTwo.ToString();
 
         canBuyField = buyFieldController.GetCanBuyOrCanNotBuy();
-        Debug.Log("canBuyField: " + canBuyField.ToString());
+        //Debug.Log("canBuyField: " + canBuyField.ToString());
+
+        BuyOrNotBuySystem();
     }
 
     private void DeactivateRollDicesButton()
@@ -133,69 +137,91 @@ public class BoardGameController : MonoBehaviour
             }
         }
     }
-
+    
+    private void BuyOrNotBuySystem()
+    {
+        switch (playerAction)
+        {
+            case "start":
+                ActivateRollDicesButton();
+                break;
+            case "rollDices":
+                DeactivateRollDicesButton();
+                if (canBuyField)
+                {
+                    ActivateBuyFieldButton();
+                    DeactivateEndOfTurnButton();
+                }
+                else
+                {
+                    DeactivateBuyFieldButton();
+                    if (pipsFromDiceOne == pipsFromDiceTwo)
+                    {
+                        ActivateRollDicesButton();
+                        DeactivateEndOfTurnButton();
+                    }
+                    else
+                    {
+                        DeactivateRollDicesButton();
+                        ActivateEndOfTurnButton();
+                    }
+                }
+                break;
+            case "buyField":
+                if (pipsFromDiceOne == pipsFromDiceTwo)
+                {
+                    ActivateRollDicesButton();
+                    DeactivateBuyFieldButton();
+                    DeactivateEndOfTurnButton();
+                }
+                else
+                {
+                    DeactivateBuyFieldButton();
+                    ActivateEndOfTurnButton();
+                }
+                break;
+            case "endOfTurn":
+                DeactivateEndOfTurnButton();
+                ActivateRollDicesButton();
+                break;
+        }
+    }
+    
     public void StartGame()
     {
         startGame = true;
-        ActivateRollDicesButton();
+        playerAction = "start";
     }
 
     public void RollDices()
     {
         if (startGame)
         {
+            playerAction = "rollDices";
             pipsFromDiceOne = Random.Range(1, 7);
             pipsFromDiceTwo = Random.Range(1, 7);
             dicesPips = pipsFromDiceOne + pipsFromDiceTwo;
             PlayersCurrentLocation();
             playerCanMove = true;
-            if (pipsFromDiceOne == pipsFromDiceTwo)
-            {
-                ActivateRollDicesButton();
-                ActivateBuyFieldButton();
-                DeactivateEndOfTurnButton();
-            }
-            else
-            {
-                DeactivateRollDicesButton();
-                ActivateBuyFieldButton();
-                DeactivateEndOfTurnButton();
-            }
-
-            if (canBuyField == true)
-            {
-                ActivateBuyFieldButton();
-            }
-            
         }
     }
 
     public void BuyField()
     {
-        DeactivateBuyFieldButton();
-        if (pipsFromDiceOne == pipsFromDiceTwo)
-        {
-            DeactivateEndOfTurnButton();
-        }
-        else
-        {
-            ActivateEndOfTurnButton();
-        }
+        playerAction = "buyField";
     }
 
     public void EndOfTurn()
     {
         if (startGame)
         {
+            playerAction = "endOfTurn";
             playerNumber += 1;
             if (playerNumber > 3)
             {
                 playerNumber = 0;
             }
             playerCanMove = false;
-            DeactivateEndOfTurnButton();
-            DeactivateBuyFieldButton();
-            ActivateRollDicesButton();
         }
     }
 

@@ -32,8 +32,6 @@ public class BuyFieldController : MonoBehaviour
     private void Update()
     {
         currentPlayerLocation = playersController.GetPlayerLocation();
-        Debug.Log(currentPlayerLocation.ToString());
-        Debug.Log(canBuyOrCanNotBuyList[currentPlayerLocation].ToString());
     }
 
     public bool GetCanBuyOrCanNotBuy()
