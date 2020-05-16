@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class PlayersController : MonoBehaviour
 {
@@ -18,8 +19,18 @@ public class PlayersController : MonoBehaviour
     private int player_3_Location;
     private int player_4_Location;
     private int playerLocation;
+    // buying Fields
+    private bool canBuyField;
+    private BuyFieldController buyFieldController;
+    private List<int> playersMoneyList = new List<int>();
+    private int fieldPrice;
+    private BoardGameFieldsPrices boardGameFieldsPrices;
 
     public List<Transform> boardGameWaypointsPath = new List<Transform>();
+    public Text player_1_Text;
+    public Text player_2_Text;
+    public Text player_3_Text;
+    public Text player_4_Text;
 
     private void Start()
     {
@@ -39,6 +50,21 @@ public class PlayersController : MonoBehaviour
         player_4_Location = 0;
         playerLocation = 0;
         playerColor = new Color32(0, 0, 0, 255);
+        canBuyField = false;
+        buyFieldController = FindObjectOfType<BuyFieldController>();
+
+        for (int i = 0; i < playersList.Count; i++)
+        {
+            playersMoneyList.Add(1500);
+        }
+
+        fieldPrice = 0;
+        boardGameFieldsPrices = FindObjectOfType<BoardGameFieldsPrices>();
+
+        player_1_Text.transform.position = new Vector3(0.9f * Screen.width, 0.9f * Screen.height, 0);
+        player_2_Text.transform.position = new Vector3(0.9f * Screen.width, 0.8f * Screen.height, 0);
+        player_3_Text.transform.position = new Vector3(0.9f * Screen.width, 0.7f * Screen.height, 0);
+        player_4_Text.transform.position = new Vector3(0.9f * Screen.width, 0.6f * Screen.height, 0);
     }
 
     private void Update()
@@ -52,6 +78,13 @@ public class PlayersController : MonoBehaviour
 
         CurrentPlayersLocation();
 
+        canBuyField = buyFieldController.GetCanBuyOrCanNotBuy();
+        fieldPrice = boardGameFieldsPrices.GetFieldsPrices();
+
+        player_1_Text.text = playersMoneyList[0].ToString();
+        player_2_Text.text = playersMoneyList[1].ToString();
+        player_3_Text.text = playersMoneyList[2].ToString();
+        player_4_Text.text = playersMoneyList[3].ToString();
         /*
         foreach (Transform player in playersList)
         {
@@ -92,6 +125,14 @@ public class PlayersController : MonoBehaviour
                 }
                 //playerLocation = player_4_Location;
                 break;
+        }
+    }
+
+    public void PlayerBuyField()
+    {
+        if (canBuyField)
+        {
+            playersMoneyList[movePlayerNumber] = playersMoneyList[movePlayerNumber] + fieldPrice;
         }
     }
 
