@@ -9,6 +9,8 @@ public class BuyFieldController : MonoBehaviour
     private int currentPlayerLocation;
     private PlayersController playersController;
     private bool fieldForBuyOrNotForBuy;
+    private int fieldPositionX;
+    private int fieldPositionZ;
 
     public List<Renderer> listOfFieldsColors = new List<Renderer>();
 
@@ -29,11 +31,15 @@ public class BuyFieldController : MonoBehaviour
         currentPlayerLocation = 0;
         playersController = FindObjectOfType<PlayersController>();
         fieldForBuyOrNotForBuy = false;
+        fieldPositionX = 0;
+        fieldPositionZ = 0;
     }
 
     private void Update()
     {
         currentPlayerLocation = playersController.GetPlayerLocation();
+        Debug.Log("Field X: " + listOfFieldsColors[currentPlayerLocation].gameObject.transform.position.x.ToString());
+        Debug.Log("Field Z: " + listOfFieldsColors[currentPlayerLocation].gameObject.transform.position.z.ToString());
     }
 
     public void MarkField()
@@ -46,6 +52,23 @@ public class BuyFieldController : MonoBehaviour
     {
         fieldForBuyOrNotForBuy = canBuyOrCanNotBuyList[currentPlayerLocation];
         return fieldForBuyOrNotForBuy;
+    }
+
+    public Color32 GetFieldsColors()
+    {
+        return listOfFieldsColors[currentPlayerLocation].material.color;
+    }
+    
+    public int GetFieldPositionX()
+    {
+        fieldPositionX = (int)listOfFieldsColors[currentPlayerLocation].gameObject.transform.position.x;
+        return fieldPositionX;
+    }
+
+    public int GetFieldPositionZ()
+    {
+        fieldPositionZ = (int)listOfFieldsColors[currentPlayerLocation].gameObject.transform.position.z;
+        return fieldPositionZ;
     }
 
 }

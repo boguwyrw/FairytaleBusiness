@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -26,6 +27,9 @@ public class PlayersController : MonoBehaviour
     private List<int> playersMoneyList = new List<int>();
     private int fieldPrice;
     private BoardGameFieldsPrices boardGameFieldsPrices;
+    // fee for park on another player's field
+    private Color32 currentFieldColor;
+    private bool playerMustPay;
 
     public List<Transform> boardGameWaypointsPath = new List<Transform>();
     public Text player_1_Text;
@@ -67,6 +71,8 @@ public class PlayersController : MonoBehaviour
 
         fieldPrice = 0;
         boardGameFieldsPrices = FindObjectOfType<BoardGameFieldsPrices>();
+        // fee for park on another player's field
+        playerMustPay = false;
 
         player_1_Text.transform.position = new Vector3(0.06f * Screen.width, 0.2f * Screen.height, 0);
         player_2_Text.transform.position = new Vector3(0.14f * Screen.width, 0.2f * Screen.height, 0);
@@ -94,6 +100,26 @@ public class PlayersController : MonoBehaviour
         canBuyField = buyFieldController.GetCanBuyOrCanNotBuy();
         fieldPrice = boardGameFieldsPrices.GetFieldsPrices();
 
+        // fee for park on another player's field
+        Debug.Log("X: " + Math.Round(playersList[movePlayerNumber].position.x).ToString());
+        Debug.Log("Z: " + Math.Round(playersList[movePlayerNumber].position.z).ToString());
+        Color32 redField = new Color32(255, 0, 0, 255);
+        Color32 greenField = new Color32(0, 255, 0, 255);
+        Color32 blueField = new Color32(0, 0, 255, 255);
+        Color32 yellowField = new Color32(255, 255, 0, 255);
+        currentFieldColor = buyFieldController.GetFieldsColors();
+        Color32 currentPlayerColor = playersList[movePlayerNumber].GetComponent<Renderer>().material.color;
+        bool equalPositions = (buyFieldController.GetFieldPositionX() == Math.Round(playersList[movePlayerNumber].position.x)) && (buyFieldController.GetFieldPositionZ() == Math.Round(playersList[movePlayerNumber].position.z));
+        if (currentFieldColor.Equals(redField) || currentFieldColor.Equals(greenField) || currentFieldColor.Equals(blueField) || currentFieldColor.Equals(yellowField))
+        {
+            if (!currentPlayerColor.Equals(currentFieldColor) && equalPositions)
+            {
+                //playerMustPay = true;
+                playersMoneyList[movePlayerNumber] = playersMoneyList[movePlayerNumber] - 16;
+            }
+        } 
+        //PlayerMustPayAction();
+
         player_1_Text.text = playersMoneyList[0].ToString();
         player_2_Text.text = playersMoneyList[1].ToString();
         player_3_Text.text = playersMoneyList[2].ToString();
@@ -105,7 +131,15 @@ public class PlayersController : MonoBehaviour
         }
         */
     }
-    
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playersMoneyList[movePlayerNumber] = playersMoneyList[movePlayerNumber] + 200;
+        }
+    }
+
     private void CurrentPlayersLocation()
     {
         switch (movePlayerNumber)
@@ -149,6 +183,16 @@ public class PlayersController : MonoBehaviour
                 }
                 //playerLocation = player_4_Location;
                 break;
+        }
+    }
+
+    // fee for park on another player's field
+    private void PlayerMustPayAction()
+    {
+        if (playerMustPay)
+        {
+            playersMoneyList[movePlayerNumber] = playersMoneyList[movePlayerNumber] - 16;
+            playerMustPay = false;
         }
     }
 
