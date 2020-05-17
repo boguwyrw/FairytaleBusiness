@@ -13,6 +13,7 @@ public class PlayersController : MonoBehaviour
     private bool isPlayerMoving;
     private List<Color32> playersColorsList = new List<Color32>();
     private Color32 playerColor;
+    private bool letsStartGame;
     // Players location
     private int player_1_Location;
     private int player_2_Location;
@@ -31,6 +32,10 @@ public class PlayersController : MonoBehaviour
     public Text player_2_Text;
     public Text player_3_Text;
     public Text player_4_Text;
+    public Image player_1_Image;
+    public Image player_2_Image;
+    public Image player_3_Image;
+    public Image player_4_Image;
 
     private void Start()
     {
@@ -50,6 +55,8 @@ public class PlayersController : MonoBehaviour
         player_4_Location = 0;
         playerLocation = 0;
         playerColor = new Color32(0, 0, 0, 255);
+        letsStartGame = false;
+
         canBuyField = false;
         buyFieldController = FindObjectOfType<BuyFieldController>();
 
@@ -61,10 +68,14 @@ public class PlayersController : MonoBehaviour
         fieldPrice = 0;
         boardGameFieldsPrices = FindObjectOfType<BoardGameFieldsPrices>();
 
-        player_1_Text.transform.position = new Vector3(0.9f * Screen.width, 0.9f * Screen.height, 0);
-        player_2_Text.transform.position = new Vector3(0.9f * Screen.width, 0.8f * Screen.height, 0);
-        player_3_Text.transform.position = new Vector3(0.9f * Screen.width, 0.7f * Screen.height, 0);
-        player_4_Text.transform.position = new Vector3(0.9f * Screen.width, 0.6f * Screen.height, 0);
+        player_1_Text.transform.position = new Vector3(0.06f * Screen.width, 0.2f * Screen.height, 0);
+        player_2_Text.transform.position = new Vector3(0.14f * Screen.width, 0.2f * Screen.height, 0);
+        player_3_Text.transform.position = new Vector3(0.06f * Screen.width, 0.1f * Screen.height, 0);
+        player_4_Text.transform.position = new Vector3(0.14f * Screen.width, 0.1f * Screen.height, 0);
+        player_1_Image.gameObject.SetActive(false);
+        player_2_Image.gameObject.SetActive(false);
+        player_3_Image.gameObject.SetActive(false);
+        player_4_Image.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -77,6 +88,8 @@ public class PlayersController : MonoBehaviour
         player_4_Location = boardGameController.GetPlayerFourLocation();
 
         CurrentPlayersLocation();
+
+        letsStartGame = boardGameController.GetStartGame();
 
         canBuyField = buyFieldController.GetCanBuyOrCanNotBuy();
         fieldPrice = boardGameFieldsPrices.GetFieldsPrices();
@@ -98,6 +111,11 @@ public class PlayersController : MonoBehaviour
         switch (movePlayerNumber)
         {
             case 0:
+                if (letsStartGame)
+                {
+                    player_1_Image.gameObject.SetActive(true);
+                }
+                player_4_Image.gameObject.SetActive(false);
                 if (isPlayerMoving)
                 {
                     playersList[0].GetComponent<NavMeshAgent>().SetDestination(boardGameWaypointsPath[player_1_Location].transform.position);
@@ -105,6 +123,8 @@ public class PlayersController : MonoBehaviour
                 //playerLocation = player_1_Location;
                 break;
             case 1:
+                player_2_Image.gameObject.SetActive(true);
+                player_1_Image.gameObject.SetActive(false);
                 if (isPlayerMoving)
                 {
                     playersList[1].GetComponent<NavMeshAgent>().SetDestination(boardGameWaypointsPath[player_2_Location].transform.position);
@@ -112,6 +132,8 @@ public class PlayersController : MonoBehaviour
                 //playerLocation = player_2_Location;
                 break;
             case 2:
+                player_3_Image.gameObject.SetActive(true);
+                player_2_Image.gameObject.SetActive(false);
                 if (isPlayerMoving)
                 {
                     playersList[2].GetComponent<NavMeshAgent>().SetDestination(boardGameWaypointsPath[player_3_Location].transform.position);
@@ -119,6 +141,8 @@ public class PlayersController : MonoBehaviour
                 //playerLocation = player_3_Location;
                 break;
             case 3:
+                player_4_Image.gameObject.SetActive(true);
+                player_3_Image.gameObject.SetActive(false);
                 if (isPlayerMoving)
                 {
                     playersList[3].GetComponent<NavMeshAgent>().SetDestination(boardGameWaypointsPath[player_4_Location].transform.position);

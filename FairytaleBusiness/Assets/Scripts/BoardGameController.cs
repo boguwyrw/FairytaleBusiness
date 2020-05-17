@@ -45,8 +45,8 @@ public class BoardGameController : MonoBehaviour
         diceTwoText.transform.position = new Vector3(0.1f * Screen.width, 0.85f * Screen.height, 0);
         startButton.transform.position = new Vector3(0.5f * Screen.width, 0.5f * Screen.height, 0);
         rollDicesButton.transform.position = new Vector3(0.1f * Screen.width, 0.75f * Screen.height, 0);
-        buyFieldButton.transform.position = new Vector3(0.1f * Screen.width, 0.5f * Screen.height, 0);
-        endOfTurnButton.transform.position = new Vector3(0.1f * Screen.width, 0.1f * Screen.height, 0);
+        buyFieldButton.transform.position = new Vector3(0.1f * Screen.width, 0.65f * Screen.height, 0);
+        endOfTurnButton.transform.position = new Vector3(0.1f * Screen.width, 0.55f * Screen.height, 0);
 
         DeactivateRollDicesButton();
         DeactivateBuyFieldButton();
