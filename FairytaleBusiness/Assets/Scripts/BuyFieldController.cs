@@ -38,8 +38,8 @@ public class BuyFieldController : MonoBehaviour
     private void Update()
     {
         currentPlayerLocation = playersController.GetPlayerLocation();
-        Debug.Log("Field X: " + listOfFieldsColors[currentPlayerLocation].gameObject.transform.position.x.ToString());
-        Debug.Log("Field Z: " + listOfFieldsColors[currentPlayerLocation].gameObject.transform.position.z.ToString());
+        //Debug.Log("Field X: " + listOfFieldsColors[currentPlayerLocation].gameObject.transform.position.x.ToString());
+        //Debug.Log("Field Z: " + listOfFieldsColors[currentPlayerLocation].gameObject.transform.position.z.ToString());
     }
 
     public void MarkField()

@@ -29,7 +29,8 @@ public class PlayersController : MonoBehaviour
     private BoardGameFieldsPrices boardGameFieldsPrices;
     // fee for park on another player's field
     private Color32 currentFieldColor;
-    private bool playerMustPay;
+    //private bool playerMustPay;
+    private bool playerPaid;
 
     public List<Transform> boardGameWaypointsPath = new List<Transform>();
     public Text player_1_Text;
@@ -72,7 +73,7 @@ public class PlayersController : MonoBehaviour
         fieldPrice = 0;
         boardGameFieldsPrices = FindObjectOfType<BoardGameFieldsPrices>();
         // fee for park on another player's field
-        playerMustPay = false;
+        playerPaid = false;
 
         player_1_Text.transform.position = new Vector3(0.06f * Screen.width, 0.2f * Screen.height, 0);
         player_2_Text.transform.position = new Vector3(0.14f * Screen.width, 0.2f * Screen.height, 0);
@@ -101,24 +102,7 @@ public class PlayersController : MonoBehaviour
         fieldPrice = boardGameFieldsPrices.GetFieldsPrices();
 
         // fee for park on another player's field
-        Debug.Log("X: " + Math.Round(playersList[movePlayerNumber].position.x).ToString());
-        Debug.Log("Z: " + Math.Round(playersList[movePlayerNumber].position.z).ToString());
-        Color32 redField = new Color32(255, 0, 0, 255);
-        Color32 greenField = new Color32(0, 255, 0, 255);
-        Color32 blueField = new Color32(0, 0, 255, 255);
-        Color32 yellowField = new Color32(255, 255, 0, 255);
-        currentFieldColor = buyFieldController.GetFieldsColors();
-        Color32 currentPlayerColor = playersList[movePlayerNumber].GetComponent<Renderer>().material.color;
-        bool equalPositions = (buyFieldController.GetFieldPositionX() == Math.Round(playersList[movePlayerNumber].position.x)) && (buyFieldController.GetFieldPositionZ() == Math.Round(playersList[movePlayerNumber].position.z));
-        if (currentFieldColor.Equals(redField) || currentFieldColor.Equals(greenField) || currentFieldColor.Equals(blueField) || currentFieldColor.Equals(yellowField))
-        {
-            if (!currentPlayerColor.Equals(currentFieldColor) && equalPositions)
-            {
-                //playerMustPay = true;
-                playersMoneyList[movePlayerNumber] = playersMoneyList[movePlayerNumber] - 16;
-            }
-        } 
-        //PlayerMustPayAction();
+        PlayerMustPayAction();
 
         player_1_Text.text = playersMoneyList[0].ToString();
         player_2_Text.text = playersMoneyList[1].ToString();
@@ -154,7 +138,6 @@ public class PlayersController : MonoBehaviour
                 {
                     playersList[0].GetComponent<NavMeshAgent>().SetDestination(boardGameWaypointsPath[player_1_Location].transform.position);
                 }
-                //playerLocation = player_1_Location;
                 break;
             case 1:
                 player_2_Image.gameObject.SetActive(true);
@@ -163,7 +146,6 @@ public class PlayersController : MonoBehaviour
                 {
                     playersList[1].GetComponent<NavMeshAgent>().SetDestination(boardGameWaypointsPath[player_2_Location].transform.position);
                 }
-                //playerLocation = player_2_Location;
                 break;
             case 2:
                 player_3_Image.gameObject.SetActive(true);
@@ -172,7 +154,6 @@ public class PlayersController : MonoBehaviour
                 {
                     playersList[2].GetComponent<NavMeshAgent>().SetDestination(boardGameWaypointsPath[player_3_Location].transform.position);
                 }
-                //playerLocation = player_3_Location;
                 break;
             case 3:
                 player_4_Image.gameObject.SetActive(true);
@@ -181,7 +162,6 @@ public class PlayersController : MonoBehaviour
                 {
                     playersList[3].GetComponent<NavMeshAgent>().SetDestination(boardGameWaypointsPath[player_4_Location].transform.position);
                 }
-                //playerLocation = player_4_Location;
                 break;
         }
     }
@@ -189,10 +169,27 @@ public class PlayersController : MonoBehaviour
     // fee for park on another player's field
     private void PlayerMustPayAction()
     {
-        if (playerMustPay)
+        if (!playerPaid)
         {
-            playersMoneyList[movePlayerNumber] = playersMoneyList[movePlayerNumber] - 16;
-            playerMustPay = false;
+            // fee for park on another player's field
+            //Debug.Log("X: " + Math.Round(playersList[movePlayerNumber].position.x).ToString());
+            //Debug.Log("Z: " + Math.Round(playersList[movePlayerNumber].position.z).ToString());
+            Color32 redField = new Color32(255, 0, 0, 255);
+            Color32 greenField = new Color32(0, 255, 0, 255);
+            Color32 blueField = new Color32(0, 0, 255, 255);
+            Color32 yellowField = new Color32(255, 255, 0, 255);
+            currentFieldColor = buyFieldController.GetFieldsColors();
+            Color32 currentPlayerColor = playersList[movePlayerNumber].GetComponent<Renderer>().material.color;
+
+            bool equalPositions = (buyFieldController.GetFieldPositionX() == Math.Round(playersList[movePlayerNumber].position.x)) && (buyFieldController.GetFieldPositionZ() == Math.Round(playersList[movePlayerNumber].position.z));
+            if (currentFieldColor.Equals(redField) || currentFieldColor.Equals(greenField) || currentFieldColor.Equals(blueField) || currentFieldColor.Equals(yellowField))
+            {
+                if (!currentPlayerColor.Equals(currentFieldColor) && equalPositions)
+                {
+                    playersMoneyList[movePlayerNumber] = playersMoneyList[movePlayerNumber] - 16;
+                    playerPaid = true;
+                }
+            }
         }
     }
 
@@ -202,6 +199,11 @@ public class PlayersController : MonoBehaviour
         {
             playersMoneyList[movePlayerNumber] = playersMoneyList[movePlayerNumber] + fieldPrice;
         }
+    }
+
+    public void PlayerStopPay()
+    {
+        playerPaid = false;
     }
 
     public int GetPlayerLocation()
