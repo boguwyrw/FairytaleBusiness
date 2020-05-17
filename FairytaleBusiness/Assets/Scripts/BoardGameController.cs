@@ -222,6 +222,9 @@ public class BoardGameController : MonoBehaviour
                 playerNumber = 0;
             }
             playerCanMove = false;
+
+            pipsFromDiceOne = 0;
+            pipsFromDiceTwo = 0;
         }
     }
 

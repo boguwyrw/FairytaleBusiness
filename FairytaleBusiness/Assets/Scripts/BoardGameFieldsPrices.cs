@@ -10,7 +10,7 @@ public class BoardGameFieldsPrices : MonoBehaviour
     private int currentPlayerLocation;
     private PlayersController playersController;
 
-    void Start()
+    private void Start()
     {
         fieldsPricesList.Add(0, 200);
         fieldsPricesList.Add(1, -60);
@@ -58,7 +58,7 @@ public class BoardGameFieldsPrices : MonoBehaviour
         playersController = FindObjectOfType<PlayersController>();
     }
 
-    void Update()
+    private void Update()
     {
         currentPlayerLocation = playersController.GetPlayerLocation();
     }

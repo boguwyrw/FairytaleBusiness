@@ -29,8 +29,9 @@ public class PlayersController : MonoBehaviour
     private BoardGameFieldsPrices boardGameFieldsPrices;
     // fee for park on another player's field
     private Color32 currentFieldColor;
-    //private bool playerMustPay;
     private bool playerPaid;
+    private int valueOfFeeToPay;
+    private BoardGameValueOfFees boardGameValueOfFees;
 
     public List<Transform> boardGameWaypointsPath = new List<Transform>();
     public Text player_1_Text;
@@ -74,6 +75,8 @@ public class PlayersController : MonoBehaviour
         boardGameFieldsPrices = FindObjectOfType<BoardGameFieldsPrices>();
         // fee for park on another player's field
         playerPaid = false;
+        valueOfFeeToPay = 0;
+        boardGameValueOfFees = FindObjectOfType<BoardGameValueOfFees>();
 
         player_1_Text.transform.position = new Vector3(0.06f * Screen.width, 0.2f * Screen.height, 0);
         player_2_Text.transform.position = new Vector3(0.14f * Screen.width, 0.2f * Screen.height, 0);
@@ -102,6 +105,7 @@ public class PlayersController : MonoBehaviour
         fieldPrice = boardGameFieldsPrices.GetFieldsPrices();
 
         // fee for park on another player's field
+        valueOfFeeToPay = boardGameValueOfFees.GetFieldsValueOfFees();
         PlayerMustPayAction();
 
         player_1_Text.text = playersMoneyList[0].ToString();
@@ -178,6 +182,7 @@ public class PlayersController : MonoBehaviour
             Color32 greenField = new Color32(0, 255, 0, 255);
             Color32 blueField = new Color32(0, 0, 255, 255);
             Color32 yellowField = new Color32(255, 255, 0, 255);
+            Color32 blackField = new Color32(0, 0, 0, 255);
             currentFieldColor = buyFieldController.GetFieldsColors();
             Color32 currentPlayerColor = playersList[movePlayerNumber].GetComponent<Renderer>().material.color;
 
@@ -186,10 +191,29 @@ public class PlayersController : MonoBehaviour
             {
                 if (!currentPlayerColor.Equals(currentFieldColor) && equalPositions)
                 {
-                    playersMoneyList[movePlayerNumber] = playersMoneyList[movePlayerNumber] - 16;
+                    playersMoneyList[movePlayerNumber] = playersMoneyList[movePlayerNumber] + valueOfFeeToPay;
                     playerPaid = true;
                 }
             }
+
+            if (currentFieldColor.Equals(redField))
+            {
+                
+            }
+            if (currentFieldColor.Equals(greenField))
+            {
+                
+            }
+            /*
+            if (currentFieldColor.Equals(blackField))
+            {
+                if ((playerLocation == 4) || (playerLocation == 38))
+                {
+                    playersMoneyList[movePlayerNumber] = playersMoneyList[movePlayerNumber] + valueOfFeeToPay;
+                    playerPaid = true;
+                }
+            }
+            */
         }
     }
 
