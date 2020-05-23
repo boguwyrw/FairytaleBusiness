@@ -186,12 +186,38 @@ public class PlayersController : MonoBehaviour
             currentFieldColor = buyFieldController.GetFieldsColors();
             Color32 currentPlayerColor = playersList[movePlayerNumber].GetComponent<Renderer>().material.color;
 
-            bool equalPositions = (buyFieldController.GetFieldPositionX() == Math.Round(playersList[movePlayerNumber].position.x)) && (buyFieldController.GetFieldPositionZ() == Math.Round(playersList[movePlayerNumber].position.z));
+            
+            float currentPlayerPositionX = playersList[movePlayerNumber].position.x;
+            float currentPlayerPositionZ = playersList[movePlayerNumber].position.z;
+            bool equalPositionsX = false;
+            bool equalPositionsZ = false;
+            if (currentPlayerPositionX >= Mathf.Min(buyFieldController.GetFieldPositionX()-1, buyFieldController.GetFieldPositionX()+1) && currentPlayerPositionX <= Mathf.Max(buyFieldController.GetFieldPositionX()-1, buyFieldController.GetFieldPositionX()+1))
+            {
+                equalPositionsX = true;
+            }
+            
+
+            
+            if(currentPlayerPositionZ >= Mathf.Min(buyFieldController.GetFieldPositionZ()-1, buyFieldController.GetFieldPositionZ()+1) && currentPlayerPositionZ <= Mathf.Max(buyFieldController.GetFieldPositionZ()-1, buyFieldController.GetFieldPositionZ()+1))
+            {
+                equalPositionsZ = true;
+            }
+
+
+            //bool equalPositions = (buyFieldController.GetFieldPositionX() == Math.Round(playersList[movePlayerNumber].position.x)) && (buyFieldController.GetFieldPositionZ() == Math.Round(playersList[movePlayerNumber].position.z));
+            bool equalPositions = (equalPositionsX == true) && (equalPositionsZ == true);
             if (currentFieldColor.Equals(redField) || currentFieldColor.Equals(greenField) || currentFieldColor.Equals(blueField) || currentFieldColor.Equals(yellowField))
             {
                 if (!currentPlayerColor.Equals(currentFieldColor) && equalPositions)
                 {
                     playersMoneyList[movePlayerNumber] = playersMoneyList[movePlayerNumber] + valueOfFeeToPay;
+                    for (int i = 0; i < playersColorsList.Count; i++)
+                    {
+                        if (playersColorsList[i].Equals(currentFieldColor))
+                        {
+                            playersMoneyList[i] = playersMoneyList[i] - valueOfFeeToPay;
+                        }
+                    }
                     playerPaid = true;
                 }
             }
