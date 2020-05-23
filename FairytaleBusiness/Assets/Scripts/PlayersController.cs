@@ -191,19 +191,14 @@ public class PlayersController : MonoBehaviour
             float currentPlayerPositionZ = playersList[movePlayerNumber].position.z;
             bool equalPositionsX = false;
             bool equalPositionsZ = false;
-            if (currentPlayerPositionX >= Mathf.Min(buyFieldController.GetFieldPositionX()-1, buyFieldController.GetFieldPositionX()+1) && currentPlayerPositionX <= Mathf.Max(buyFieldController.GetFieldPositionX()-1, buyFieldController.GetFieldPositionX()+1))
+            if (currentPlayerPositionX >= Mathf.Min(buyFieldController.GetFieldPositionX()-2, buyFieldController.GetFieldPositionX()+2) && currentPlayerPositionX <= Mathf.Max(buyFieldController.GetFieldPositionX()-2, buyFieldController.GetFieldPositionX()+2))
             {
                 equalPositionsX = true;
             }
-            
-
-            
-            if(currentPlayerPositionZ >= Mathf.Min(buyFieldController.GetFieldPositionZ()-1, buyFieldController.GetFieldPositionZ()+1) && currentPlayerPositionZ <= Mathf.Max(buyFieldController.GetFieldPositionZ()-1, buyFieldController.GetFieldPositionZ()+1))
+            if(currentPlayerPositionZ >= Mathf.Min(buyFieldController.GetFieldPositionZ()-2, buyFieldController.GetFieldPositionZ()+2) && currentPlayerPositionZ <= Mathf.Max(buyFieldController.GetFieldPositionZ()-2, buyFieldController.GetFieldPositionZ()+2))
             {
                 equalPositionsZ = true;
             }
-
-
             //bool equalPositions = (buyFieldController.GetFieldPositionX() == Math.Round(playersList[movePlayerNumber].position.x)) && (buyFieldController.GetFieldPositionZ() == Math.Round(playersList[movePlayerNumber].position.z));
             bool equalPositions = (equalPositionsX == true) && (equalPositionsZ == true);
             if (currentFieldColor.Equals(redField) || currentFieldColor.Equals(greenField) || currentFieldColor.Equals(blueField) || currentFieldColor.Equals(yellowField))
@@ -219,6 +214,10 @@ public class PlayersController : MonoBehaviour
                         }
                     }
                     playerPaid = true;
+                }
+                else
+                {
+                    playerPaid = false;
                 }
             }
 
